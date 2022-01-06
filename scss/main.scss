@@ -9,15 +9,16 @@
 }
 
 body {
-  background-color: $darker-blue;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   line-height: 1.5;
-  color: $soft-blue;
+  color: $white;
   font-family: $main-font;
 }
 
 a {
   text-decoration: none;
-  color: $soft-blue;
+  color: $white;
 }
 
 ul {
@@ -40,7 +41,7 @@ img {
 #nav {
   // background: red;
   height: 5rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
