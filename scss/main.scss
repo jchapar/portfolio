@@ -1,0 +1,70 @@
+@import "config";
+@import "utilities";
+
+// Reset Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $darker-blue;
+  line-height: 1.5;
+  color: $soft-blue;
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+  color: $soft-blue;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+img {
+  width: 100%;
+}
+
+// Header
+#main-header {
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    // background: red;
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 1rem;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          border-bottom-color: #28a2b7;
+        }
+
+        a {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
