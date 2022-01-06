@@ -4,3 +4,32 @@
   margin: auto;
   overflow: hidden;
 }
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@mixin key_frame($name: "glowing_animation", $duration: 20s, $count: infinite) {
+  @keyframes glowing_animation {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $count;
+}

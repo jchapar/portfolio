@@ -36,14 +36,20 @@ img {
   width: 100%;
 }
 
-// Header
-#main-header {
-  #main-nav {
+// Navigation
+#nav {
+  // background: red;
+  height: 5rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    // background: red;
 
     .logo {
       font-size: 2rem;
@@ -64,6 +70,64 @@ img {
         a {
           font-size: 1.3rem;
         }
+      }
+    }
+  }
+}
+
+// Header
+#header {
+  // Header Content
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .profile-img-container {
+      height: 25rem;
+      width: 25rem;
+      background: red;
+      border-radius: 50%;
+      position: relative;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .glow {
+      border-radius: 50%;
+
+      &::after {
+        filter: blur(25px);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        border-radius: 50%;
+        background: linear-gradient(
+          45deg,
+          #e6fb04,
+          #ff6600,
+          #00ff66,
+          #00ffff,
+          #ff00ff,
+          #ff0099,
+          #6e0ff0,
+          #ff3300,
+          #099fff
+        );
+        background-size: 400%;
+        width: calc(100% + 7px);
+        height: calc(100% + 7px);
+        z-index: -1;
+        @include key_frame(glowing_animation);
       }
     }
   }
