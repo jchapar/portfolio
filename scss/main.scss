@@ -138,7 +138,7 @@ img {
         @include key_frame(glowing_animation);
       }
     }
-
+    // Header Text
     .header-text-container {
       margin-left: 3rem;
       max-width: 50%;
@@ -177,9 +177,9 @@ img {
 }
 
 // About
-#about-a {
+#about {
   margin-bottom: 2rem;
-
+  // Main Bio
   .text-container {
     h2 {
       font-size: 2rem;
@@ -210,11 +210,62 @@ img {
       }
     }
   }
-
+  // Tech Bio Images
   .image-container {
     margin-bottom: 5rem;
-  }
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
+    .image-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fab,
+    .fas {
+      font-size: 5rem;
+    }
+
+    .icon-1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      color: #e34c26;
+    }
+    .icon-2 {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      color: #264de4;
+    }
+    .icon-3 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      color: #f0db4f;
+    }
+    .icon-4 {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      color: #cc6699;
+    }
+    .icon-5 {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      color: #424242;
+    }
+    .icon-6 {
+      grid-column: 5/6;
+      grid-row: 2/3;
+      color: #7c24eb;
+    }
+    .icon-7 {
+      grid-column: 4/5;
+      grid-row: 3/4;
+      color: #2e742b;
+    }
+  }
+  // Tech bio
   .tech-container {
     h2 {
       font-size: 2rem;
@@ -242,6 +293,32 @@ img {
 
       span {
         color: $main-color;
+      }
+    }
+  }
+}
+
+// Projects
+#projects {
+  margin: 2rem 0;
+  .project {
+    margin-bottom: 2rem;
+    .project-bio {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        max-width: 90%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .project-image {
+      img {
+        max-height: 25rem;
       }
     }
   }
